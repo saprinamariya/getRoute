@@ -1,0 +1,229 @@
+@import "./variables.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header-background {
+  background: no-repeat url(../img/bg-header.png);
+  background-size: 50% 79%;
+  background-position: top right;
+}
+
+.main-container {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.logo {
+  font-family: $font-base;
+}
+
+.introduction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: right / contain no-repeat url("../img/pic_header.png");
+  height: 500px;
+
+  &__title {
+    font-family: $font-base;
+    font-weight: bold;
+    font-size: 64px;
+    color: $color-black;
+    line-height: 0.9;
+    margin: 0;
+
+    &_small {
+      font-size: 30px;
+    }
+
+    &_orange {
+      color: $color-orange;
+    }
+
+    &_black {
+      color: $color-black;
+    }
+  }
+
+  &__desc {
+    width: 410px;
+  }
+
+  &__img {
+    width: 676px;
+  }
+
+  &__btn-container {
+    margin-top: 40px;
+  }
+
+  &__btn-want {
+    width: 200px;
+  }
+
+  &__btn-how-work {
+    color: $color-orange;
+    border: none;
+    background: none;
+    font-family: $font-second;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+}
+
+.button {
+  border: none;
+  border-radius: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(0.25turn, $color-orange, 50%, #fc9f59);
+  color: $color-white;
+  font-family: $font-second;
+  font-weight: bold;
+}
+
+.title {
+  font-family: $font-base;
+  font-weight: bold;
+  color: $color-black;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle {
+  font-family: $font-base;
+  font-weight: bold;
+  color: $color-black;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.desc {
+  color: $color-grey;
+  font-family: $font-second;
+  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.what-we-do {
+  padding: 12% 0 15%;
+
+  &__background {
+    background: no-repeat url("../img/bg-block1.png");
+    background-size: 100%;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  &__item {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__desc {
+    font-size: 14px;
+  }
+}
+
+.how-we-do {
+  &__item-container {
+    height: 720px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+
+  &__img {
+    width: 510px;
+    height: 250px;
+
+    &_left {
+      margin-right: 40px;
+    }
+
+    &_right {
+      margin-left: 40px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__click {
+    display: flex;
+    align-items: center;
+  }
+
+  &__click-text {
+    width: 190px;
+    margin-left: 20px;
+
+    &_orange {
+      color: $color-orange;
+    }
+
+    &_black {
+      color: $color-black;
+    }
+  }
+
+  &__background {
+    background: no-repeat url("../img/bg-block2.svg");
+    background-size: 100%;
+    background-position-y: 34%;
+  }
+}
+
+.form-request {
+  &__wrap {
+    padding: 30px;
+    background-color: $color-bg;
+    position: relative;
+    margin-bottom: 100px;
+  }
+
+  &__img {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 367px;
+  }
+
+  &__desc {
+    margin: 0;
+  }
+
+  &__btn-container {
+    margin-top: 30px;
+  }
+
+  &__input {
+    padding: 8px 0 8px 20px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 5px;
+    width: 230px;
+  }
+}

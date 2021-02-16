@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Gotham Pro Black";
+  src: url("GothamPro-Black.eot");
+  src: url("GothamPro-Black.eot?#iefix") format("embedded-opentype"),
+    url("GothamPro-Black.woff") format("woff"),
+    url("GothamPro-Black.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+$font-base: "Gotham Pro Black", sans-serif;
+$font-second: "Open Sans", sans-serif;
+
+$color-orange: #de6341;
+$color-grey: #807d8d;
+$color-black: #1e142e;
+$color-white: #ffffff;
+$color-bg: #f6f4f8;
