@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>getRoute.ai</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -15,30 +16,40 @@
       <div class="main-container">
         <header class="header">
           <div class="logo">get<strong>Route</strong>.ai</div>
-          <div class="">бургер</div>
+          <div class="hamburger-menu"></div>
         </header>
       </div>
       <section class="introduction">
-        <div class="introduction__text main-container">
-          <h1 class="introduction__title">
-            <span> Преврати <br />поездку<br /> </span>
+        <div class="main-container">
+          <div class="introduction__text">
+            <h1 class="introduction__title">
+              <span> Преврати <br />поездку<br /> </span>
 
-            <span class="introduction__title_small">
-              в
-              <span class="introduction__title_orange">
-                приключение<span class="introduction__title_black">!</span>
+              <span class="introduction__title_small">
+                в
+                <span class="introduction__title_orange">
+                  приключение<span class="introduction__title_black">!</span>
+                </span>
               </span>
-            </span>
-          </h1>
-          <p class="introduction__desc desc">
-            Алгоритмы getroute.ai строят маршруты по местам, которые понравятся
-            именно вам.
-          </p>
-          <div class="introduction__btn-container">
-            <button class="introduction__btn-want button">Хочу!</button>
-            <button class="introduction__btn-how-work">
-              Как это работает?
-            </button>
+            </h1>
+            <p class="introduction__desc desc">
+              Алгоритмы getroute.ai строят маршруты по местам, которые
+              понравятся именно вам.
+            </p>
+            <div class="introduction__pic-wrap">
+              <img
+                class="introduction__pic-header"
+                src="./img/pic_header.png"
+                alt=""
+              />
+            </div>
+
+            <div class="introduction__btn-container">
+              <button class="introduction__btn-want button">Хочу!</button>
+              <button class="introduction__btn-how-work">
+                Как это работает?
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -109,7 +120,7 @@
               alt=""
             />
 
-            <div class="how-we-do__text">
+            <div class="how-we-do__text how-we-do__text_right">
               <h3 class="how-we-do__subtitle subtitle">
                 1. Собираем свою базу достопримечательностей
               </h3>
@@ -131,7 +142,7 @@
         <div class="how-we-do__background">
           <div class="main-container">
             <div class="how-we-do__item">
-              <div class="how-we-do__text">
+              <div class="how-we-do__text how-we-do__text_left">
                 <h3 class="how-we-do__subtitle subtitle">
                   2. Узнаем ваши интересы
                 </h3>
@@ -159,14 +170,14 @@
                     src="./img/pic_how_3.png"
                     alt=""
                   />
-                  <div class="how-we-do__click">
+                  <div class="how-we-do__click how-we-do__click_top">
                     <img
                       class="how-we-do__click-img"
                       src="./img/icn_click.svg"
                       alt=""
                     />
                     <div class="how-we-do__click-text subtitle">
-                      <span>И все это за несколько кликов и </span>
+                      <span>И все это <br />за несколько кликов и </span>
                       <span class="how-we-do__click-text_orange"
                         >30 секунд<span class="how-we-do__click-text_black"
                           >!</span
@@ -175,7 +186,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="how-we-do__text">
+                <div class="how-we-do__text how-we-do__text_right">
                   <h3 class="how-we-do__subtitle subtitle">
                     3. Создаем автоприключения
                   </h3>
@@ -206,13 +217,30 @@
                     со всей необходимой информацией.
                   </p>
                 </div>
+                <div class="how-we-do__click how-we-do__click_bottom">
+                  <img
+                    class="how-we-do__click-img"
+                    src="./img/icn_click.svg"
+                    alt=""
+                  />
+                  <div class="how-we-do__click-text subtitle">
+                    <span>И все это <br />за несколько кликов и </span>
+                    <span class="how-we-do__click-text_orange"
+                      >30 секунд<span class="how-we-do__click-text_black"
+                        >!</span
+                      >
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <section class="main-container">
+          <section class="container-footer">
             <div class="form-request__wrap">
               <form class="form-request" action="">
-                <h2 class="subtitle">Хотите попробовать?</h2>
+                <h2 class="form-request__title subtitle">
+                  Хотите попробовать?
+                </h2>
                 <p class="form-request__desc desc">
                   Оставьте свой e-mail и получите доступ к сервису в числе
                   первых.
@@ -224,7 +252,9 @@
                     class="form-request__input desc"
                     placeholder="Введите ваш e-mail"
                   />
-                  <button class="button">Подписаться</button>
+                  <button class="form-request__button button">
+                    Подписаться
+                  </button>
                 </div>
               </form>
 
