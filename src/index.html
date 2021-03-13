@@ -249,12 +249,31 @@
                 <div class="form-request__btn-container">
                   <input
                     type="text"
+                    name="email"
+                    id="email-input"
                     class="form-request__input desc"
                     placeholder="Введите ваш e-mail"
+                    required
                   />
-                  <button class="form-request__button button">
-                    Подписаться
-                  </button>
+                  <input
+                    class="form-request__button button"
+                    id="submit-button"
+                    type="submit"
+                    value="Подписаться"
+                    disabled
+                  />
+                  <div class="form-request__button-done-wrap">
+                    <button
+                      class="form-request__button-done button"
+                      type="text"
+                    >
+                      <img
+                        class="form-request__button-done-icon"
+                        src="./img/done-icon.svg"
+                        alt=""
+                      />Готово
+                    </button>
+                  </div>
                 </div>
               </form>
 
@@ -264,7 +283,25 @@
         </div>
       </div>
     </section>
-
+    <div class="overlay"></div>
+    <div class="main-container">
+      <div class="modal">
+        <div class="modal__btn-close">
+          <img src="./img/icon-close.svg" alt="" />
+        </div>
+        <div class="modal__content">
+          <div class="modal__body">
+            <img class="modal__img" src="./img/send.png" alt="" />
+            <h4 class="modal__title">Мы внесли вас в список!</h4>
+            <p class="modal__description">
+              Как все будет готово, вы получите доступ к сервису в числе
+              первых.<br />
+              Никакого спама или рекламы!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>

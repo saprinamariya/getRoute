@@ -52,9 +52,12 @@ body {
 .desc {
   color: $color-grey;
   font-family: $font-second;
+  font-size: 18px;
   line-height: 1.5;
-  font-size: 15px;
-  line-height: 1.7;
+
+  @include media-phone {
+    font-size: 16px;
+  }
 }
 
 .main-container {
@@ -110,6 +113,10 @@ body {
   display: block;
   position: absolute;
   right: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .hamburger-menu:before {
@@ -167,14 +174,14 @@ body {
     margin: 0;
 
     @include media-phone {
-      font-size: 46px;
+      font-size: 48px;
     }
 
     &_small {
-      font-size: 40px;
+      font-size: 48px;
 
       @include media-phone {
-        font-size: 28px;
+        font-size: 33px;
       }
     }
 
@@ -188,14 +195,14 @@ body {
   }
 
   &__desc {
-    width: 410px;
+    width: 450px;
 
     @include media-phone {
       width: auto;
     }
 
     @include media-tablet {
-      width: 230px;
+      width: 290px;
     }
   }
 
@@ -204,7 +211,7 @@ body {
   }
 
   &__btn-container {
-    margin-top: 40px;
+    margin-top: 25px;
 
     @include media-phone {
       display: flex;
@@ -214,6 +221,7 @@ body {
 
   &__btn-want {
     width: 200px;
+    font-size: 15px;
 
     @include media-phone {
       width: 270px;
@@ -227,6 +235,7 @@ body {
 
   &__btn-how-work {
     color: $color-orange;
+    font-size: 15px;
     border: none;
     background: none;
     font-family: $font-second;
@@ -285,15 +294,13 @@ body {
 
     @include media-phone {
       width: auto;
+      height: auto;
     }
 
     @include media-tablet {
       width: 270px;
+      height: 300px;
     }
-  }
-
-  &__desc {
-    font-size: 14px;
   }
 
   &__title {
@@ -327,15 +334,13 @@ body {
   }
 
   &__item-container {
-    height: 620px;
+    margin-bottom: 160px;
 
     @include media-phone {
-      height: auto;
       margin-bottom: 40px;
     }
 
     @include media-tablet {
-      height: auto;
       margin-bottom: 180px;
     }
   }
@@ -532,7 +537,7 @@ body {
   }
 
   &__title {
-    font-size: 22px;
+    font-size: 28px;
 
     @include media-phone {
       font-size: 26px;
@@ -566,11 +571,17 @@ body {
   }
 
   &__input {
-    padding: 8px 20px;
+    padding: 7px 20px;
     border: none;
     border-radius: 20px;
     margin-right: 5px;
-    width: 230px;
+    width: 250px;
+    position: relative;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+    }
 
     @include media-phone {
       margin: 0 0 10px;
@@ -580,8 +591,118 @@ body {
   }
 
   &__button {
+    &:disabled {
+      box-shadow: none;
+      cursor: auto;
+      opacity: 0.75;
+    }
+
     @include media-phone {
       width: 100%;
     }
+  }
+
+  &__button-done-wrap {
+    display: none;
+
+    @include media-phone {
+      width: 100%;
+    }
+  }
+
+  &__button-done {
+    display: flex;
+    color: $color-orange;
+    background: $color-white;
+    width: 130px;
+
+    @include media-phone {
+      width: 100%;
+      justify-content: center;
+    }
+
+    &:hover {
+      box-shadow: none;
+      cursor: auto;
+    }
+  }
+
+  &__button-done-icon {
+    margin-right: 10px;
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.7s all;
+}
+
+.modal {
+  display: none;
+  width: 330px;
+  height: 290px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  text-align: center;
+  padding: 50px 30px;
+  border-radius: 30px;
+  background-color: #fff;
+  transition: 0.7s all;
+
+  @include media-phone {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+
+    @include media-phone {
+      right: 50px;
+    }
+  }
+
+  &__content {
+    @include media-phone {
+      padding: 0 20px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  &__img {
+    width: 130px;
+  }
+
+  &__title {
+    font-family: $font-base;
+    font-size: 18px;
+    color: $color-black;
+  }
+
+  &__description {
+    font-family: $font-second;
+    font-size: 14px;
+    line-height: 1.7;
+    color: $color-grey;
   }
 }
